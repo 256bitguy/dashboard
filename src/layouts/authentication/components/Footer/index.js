@@ -56,6 +56,7 @@ function Footer({ light }) {
 
               [breakpoints.up("lg")]: {
                 mt: 0,
+                mb: 0,
               },
             })}
           >
