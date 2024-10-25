@@ -1,4 +1,3 @@
-import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import Profile from "layouts/profile";
@@ -7,6 +6,7 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import Dashboard from "layouts/dashboard";
 
 const routes = [
   {

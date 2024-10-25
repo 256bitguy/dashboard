@@ -7,7 +7,7 @@ import Checkbox from "@mui/material/Checkbox";
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import MDInput from "components/MDInput";
+
 import MDButton from "components/MDButton";
 
 // Authentication layout components
@@ -15,8 +15,23 @@ import CoverLayout from "layouts/authentication/components/CoverLayout";
 
 // Images
 import bgImage from "assets/images/bg-sign-up-cover.jpeg";
+import MDInput from "components/MDInput";
+import { useState } from "react";
 
 function Cover() {
+  const [user, setUser] = useState({ name: "", email: "", password: "" });
+  const signin = function (e) {
+    const { name, value } = e.target;
+    setUser((prevValue) => ({
+      ...prevValue,
+      [name]: value,
+    }));
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(user);
+  }
   return (
     <CoverLayout image={bgImage}>
       <Card>
@@ -39,15 +54,36 @@ function Cover() {
           </MDTypography>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
-          <MDBox component="form" role="form">
+          <MDBox component="form" role="form" onSubmit={handleSubmit}>
             <MDBox mb={2}>
-              <MDInput type="text" label="Name" variant="standard" fullWidth />
+              <MDInput
+                type="text"
+                label="name"
+                variant="standard"
+                name="name"
+                fullWidth
+                onChange={signin}
+              />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="email" label="Email" variant="standard" fullWidth />
+              <MDInput
+                type="email"
+                label="email"
+                variant="standard"
+                name="email"
+                fullWidth
+                onChange={signin}
+              />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="password" label="Password" variant="standard" fullWidth />
+              <MDInput
+                type="password"
+                label="password"
+                variant="standard"
+                name="password"
+                fullWidth
+                onChange={signin}
+              />
             </MDBox>
             <MDBox display="flex" alignItems="center" ml={-1}>
               <Checkbox />
@@ -71,7 +107,7 @@ function Cover() {
               </MDTypography>
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
+              <MDButton variant="gradient" color="info" type="submit" fullWidth>
                 sign in
               </MDButton>
             </MDBox>
