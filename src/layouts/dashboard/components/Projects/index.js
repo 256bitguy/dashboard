@@ -14,15 +14,12 @@ import MDTypography from "components/MDTypography";
 
 // Data layouts/dashboard/components/Projects/data
 import data from "../../../dashboard/components/Projects/data";
-import DataTable from "examples/Tables/DataTable";
+import DataTable from "../../../../examples/Tables/DataTable";
 import { useNavigate } from "react-router-dom";
 
 function Projects() {
   const navigate = useNavigate();
 
-  const updateParams = (newId) => {
-    navigate(`/dashboard/?id=${newId}`);
-  };
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
 

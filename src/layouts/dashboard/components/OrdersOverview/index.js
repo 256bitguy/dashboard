@@ -8,8 +8,13 @@ import MDTypography from "components/MDTypography";
 
 //Job Dashboard 2 React example components
 import TimelineItem from "examples/Timeline/TimelineItem";
+import { useSelector } from "react-redux";
 
 function OrdersOverview() {
+  const Timelines = useSelector((state) => state.counter.timelines);
+  console.log(Timelines);
+  const count = useSelector((state) => state.counter.current);
+  console.log(count);
   return (
     <Card sx={{ height: "100%" }}>
       <MDBox pt={3} px={3}>
@@ -26,27 +31,21 @@ function OrdersOverview() {
         </MDBox>
       </MDBox>
       <MDBox p={2}>
-        <TimelineItem color="success" icon="notifications" title="Dsa" dateTime="22 DEC 7:20 PM" />
-        <TimelineItem
-          color="error"
-          icon="inventory_2"
-          title="System Design"
-          dateTime="21 DEC 11 PM"
-        />
-        <TimelineItem
-          color="info"
-          icon="shopping_cart"
-          title="Aptitude"
-          dateTime="21 DEC 9:34 PM"
-        />
-        <TimelineItem color="warning" icon="payment" title="Projects" dateTime="20 DEC 2:20 AM" />
-        <TimelineItem
-          color="primary"
-          icon="vpn_key"
-          title="Coding Questions"
-          dateTime="18 DEC 4:54 AM"
-          lastItem
-        />
+        {Timelines.map((timeline, index) => (
+          <div key={index}>
+            {index == count - 1 &&
+              timeline.map((item) => (
+                <TimelineItem
+                  key={item.key}
+                  color={item.color}
+                  icon={item.icon}
+                  title={item.title}
+                  dateTime={item.dateTime}
+                  lastItem={item.lastItem}
+                />
+              ))}
+          </div>
+        ))}
       </MDBox>
     </Card>
   );
