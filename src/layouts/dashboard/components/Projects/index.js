@@ -12,11 +12,17 @@ import MDTypography from "components/MDTypography";
 
 //Job Dashboard 2 React examples
 
-// Data
-import data from "layouts/dashboard/components/Projects/data";
+// Data layouts/dashboard/components/Projects/data
+import data from "../../../dashboard/components/Projects/data";
 import DataTable from "examples/Tables/DataTable";
+import { useNavigate } from "react-router-dom";
 
 function Projects() {
+  const navigate = useNavigate();
+
+  const updateParams = (newId) => {
+    navigate(`/dashboard/?id=${newId}`);
+  };
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
 
@@ -38,7 +44,7 @@ function Projects() {
       open={Boolean(menu)}
       onClose={closeMenu}
     >
-      <MenuItem onClick={closeMenu}>Action</MenuItem>
+      <MenuItem onClick={closeMenu}>Add New</MenuItem>
       <MenuItem onClick={closeMenu}>Another action</MenuItem>
       <MenuItem onClick={closeMenu}>Something else</MenuItem>
     </Menu>
@@ -49,7 +55,7 @@ function Projects() {
       <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <MDBox>
           <MDTypography variant="h6" gutterBottom>
-            Projects
+            Applied
           </MDTypography>
           <MDBox display="flex" alignItems="center" lineHeight={0}>
             <Icon
