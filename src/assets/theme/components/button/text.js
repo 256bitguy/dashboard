@@ -1,8 +1,8 @@
-// Material Dashboard 2 React Base Styles
+//Job Dashboard 2 React Base Styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
-// Material Dashboard 2 React Helper Functions
+//Job Dashboard 2 React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { text, info, secondary, transparent } = colors;

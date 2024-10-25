@@ -1,6 +1,6 @@
 /**
     
-* Material Dashboard 2  React - v2.2.0
+*Job Dashboard 2  React - v2.2.0
     
 
   

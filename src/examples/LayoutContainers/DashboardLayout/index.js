@@ -6,10 +6,10 @@ import { useLocation } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// Material Dashboard 2 React components
+//Job Dashboard 2 React components
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 React context
+//Job Dashboard 2 React context
 import { useMaterialUIController, setLayout } from "context";
 
 function DashboardLayout({ children }) {

@@ -6,11 +6,11 @@ import Icon from "@mui/material/Icon";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-// Material Dashboard 2 React components
+//Job Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Dashboard 2 React examples
+//Job Dashboard 2 React examples
 
 // Data
 import data from "layouts/dashboard/components/Projects/data";

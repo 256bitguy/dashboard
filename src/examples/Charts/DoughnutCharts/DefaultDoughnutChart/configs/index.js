@@ -1,6 +1,6 @@
 /**
     
-* Material Dashboard 2  React - v2.2.0
+*Job Dashboard 2  React - v2.2.0
     
 
   
@@ -13,7 +13,7 @@
 */
 
 /* eslint-disable no-dupe-keys */
-// Material Dashboard 2 React base styles
+//Job Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 
 const { gradients, dark } = colors;

@@ -1,6 +1,6 @@
 /**
     
-* Material Dashboard 2  React - v2.2.0
+*Job Dashboard 2  React - v2.2.0
     
 
   
@@ -35,7 +35,7 @@ import {
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Material Dashboard 2 React components
+//Job Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDProgress from "components/MDProgress";

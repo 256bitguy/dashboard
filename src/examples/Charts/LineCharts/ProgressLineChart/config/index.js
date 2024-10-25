@@ -1,6 +1,6 @@
 /**
     
-* Material Dashboard 2 React - v2.1.0
+*Job Dashboard 2 React - v2.1.0
     
 
 * Product Page: https://www.creative-tim.com/product/nextjs-material-dashboard-pro
@@ -15,7 +15,7 @@
 
 /* eslint-disable no-dupe-keys */
 
-// Material Dashboard 2 React base styles
+//Job Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 

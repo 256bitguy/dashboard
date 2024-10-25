@@ -1,6 +1,6 @@
 /**
     
-* NextJS Material Dashboard 2 - v2.1.0
+* NextJSJob Dashboard 2 - v2.1.0
     
 
 * Product Page: https://www.creative-tim.com/product/nextjs-material-dashboard-pro
@@ -13,7 +13,7 @@
 *    
 */
 
-// NextJS Material Dashboard 2 base styles
+// NextJSJob Dashboard 2 base styles
 import typography from "assets/theme/base/typography";
 
 function configs(labels, datasets) {

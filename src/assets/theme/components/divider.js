@@ -1,7 +1,7 @@
-// Material Dashboard 2 React base styles
+//Job Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 
-// Material Dashboard 2 React helper functions
+//Job Dashboard 2 React helper functions
 import rgba from "assets/theme/functions/rgba";
 import pxToRem from "assets/theme/functions/pxToRem";
 

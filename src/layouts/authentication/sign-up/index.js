@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useNavigation } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
 import Checkbox from "@mui/material/Checkbox";
 
-// Material Dashboard 2 React components
+//Job Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
@@ -19,6 +19,7 @@ import MDInput from "components/MDInput";
 import { useState } from "react";
 
 function Cover() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const signin = function (e) {
     const { name, value } = e.target;
@@ -31,6 +32,7 @@ function Cover() {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(user);
+    navigate("/authentication/sign-in");
   }
   return (
     <CoverLayout image={bgImage}>

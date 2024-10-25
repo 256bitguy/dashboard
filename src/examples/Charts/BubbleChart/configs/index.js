@@ -1,6 +1,6 @@
 /**
     
-* Material Dashboard 2  React - v2.2.0
+*Job Dashboard 2  React - v2.2.0
     
 
   
@@ -12,7 +12,7 @@
 *    
 */
 
-// Material Dashboard 2 React base styles
+//Job Dashboard 2 React base styles
 import typography from "assets/theme/base/typography";
 
 function configs(labels, datasets) {
