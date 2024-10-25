@@ -7,14 +7,14 @@ const initialState = {
       {
         key: 1,
         color: "success",
-        icon: "notifications",
+        icon: "check",
         title: "Dsa",
-        dateTime: "22 DEC 7:20 PM",
+        dateTime: "completed",
       },
       {
         key: 2,
         color: "error",
-        icon: "inventory_2",
+        icon: "date_range",
         title: "System Design",
         dateTime: "21 DEC 11 PM",
         lastItem: true,

@@ -38,7 +38,7 @@ export default function data() {
   return {
     columns: [
       { Header: "Recruiter", accessor: "Recruiter", width: "45%", align: "left" },
-      { Header: "Job", accessor: "Job", align: "left" },
+      { Header: "Company", accessor: "Company", align: "left" },
       { Header: "Status", accessor: "Status", align: "center" },
       { Header: "Date", accessor: "Date", align: "center" },
       { Header: "action", accessor: "action", align: "center" },
@@ -47,7 +47,7 @@ export default function data() {
     rows: [
       {
         Recruiter: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
-        Job: <Job title="Manager" description="Organization" />,
+        Company: <Job title="Manager" description="Organization" />,
         Status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="Scheduled" color="success" variant="gradient" size="sm" />
@@ -62,7 +62,7 @@ export default function data() {
       },
       {
         Recruiter: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
-        Job: <Job title="Programator" description="Developer" />,
+        Company: <Job title="Programator" description="Developer" />,
         Status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="Pending" color="dark" variant="gradient" size="sm" />
@@ -77,7 +77,7 @@ export default function data() {
       },
       {
         Recruiter: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
-        Job: <Job title="Executive" description="Projects" />,
+        Company: <Job title="Executive" description="Projects" />,
         Status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="Scheduled" color="success" variant="gradient" size="sm" />
@@ -92,7 +92,7 @@ export default function data() {
       },
       {
         Recruiter: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
-        Job: <Job title="Programator" description="Developer" />,
+        Company: <Job title="Programator" description="Developer" />,
         Status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="Scheduled" color="success" variant="gradient" size="sm" />
@@ -107,7 +107,7 @@ export default function data() {
       },
       {
         Recruiter: <Author image={team3} name="Richard Gran" email="richard@creative-tim.com" />,
-        Job: <Job title="Manager" description="Executive" />,
+        Company: <Job title="Manager" description="Executive" />,
         Status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="Pending" color="dark" variant="gradient" size="sm" />
@@ -122,7 +122,7 @@ export default function data() {
       },
       {
         Recruiter: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
-        Job: <Job title="Programator" description="Developer" />,
+        Company: <Job title="Programator" description="Developer" />,
         Status: (
           <MDBox ml={-1}>
             <MDBadge badgeContent="Pending" color="dark" variant="gradient" size="sm" />

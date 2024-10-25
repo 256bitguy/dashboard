@@ -1,18 +1,3 @@
-/**
-    
-*Job Dashboard 2 React - v1.0.0
-    
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2021 Vivek (https://www.creative-tim.com)
-
-     
-
-    
-
-*    
-*/
-
 import { forwardRef } from "react";
 
 // prop-types is a library for typechecking of props

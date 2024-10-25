@@ -6,8 +6,8 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-//Job Dashboard 2 React example components
-import TimelineItem from "examples/Timeline/TimelineItem";
+//Job Dashboard 2 examples/Timeline/TimelineItem
+import TimelineItem from "../../../../examples/Timeline/TimelineItem";
 import { useSelector } from "react-redux";
 
 function OrdersOverview() {
