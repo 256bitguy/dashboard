@@ -15,7 +15,8 @@ import MDTypography from "components/MDTypography";
 // Data layouts/dashboard/components/Projects/data
 import data from "../../../dashboard/components/Projects/data";
 import DataTable from "../../../../examples/Tables/DataTable";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 function Projects() {
   const navigate = useNavigate();
@@ -27,24 +28,9 @@ function Projects() {
   const closeMenu = () => setMenu(null);
 
   const renderMenu = (
-    <Menu
-      id="simple-menu"
-      anchorEl={menu}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "left",
-      }}
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={Boolean(menu)}
-      onClose={closeMenu}
-    >
-      <MenuItem onClick={closeMenu}>Add New</MenuItem>
-      <MenuItem onClick={closeMenu}>Another action</MenuItem>
-      <MenuItem onClick={closeMenu}>Something else</MenuItem>
-    </Menu>
+    <Link to="/formadd">
+      <Button>Add New</Button>
+    </Link>
   );
 
   return (
@@ -69,11 +55,7 @@ function Projects() {
             </MDTypography>
           </MDBox>
         </MDBox>
-        <MDBox color="text" px={2}>
-          <Icon sx={{ cursor: "pointer", fontWeight: "bold" }} fontSize="small" onClick={openMenu}>
-            more_vert
-          </Icon>
-        </MDBox>
+
         {renderMenu}
       </MDBox>
       <MDBox>

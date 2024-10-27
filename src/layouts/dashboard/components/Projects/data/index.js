@@ -10,18 +10,12 @@ import MDProgress from "components/MDProgress";
 
 // Images
 
-import team1 from "assets/images/team-1.jpg";
-import team2 from "assets/images/team-2.jpg";
-import team3 from "assets/images/team-3.jpg";
-import team4 from "assets/images/team-4.jpg";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { increment } from "../../../../../../src/store/slices/Preparation";
-import { avatars } from "./avatar";
 
 export default function data() {
   const applied = useSelector((state) => state.company.applied);
-  console.log(applied, "asdsd");
 
   const dispatch = useDispatch();
   const avatars = (members) =>
@@ -51,7 +45,6 @@ export default function data() {
 
   const Company = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
-      <MDAvatar src={image} name={name} size="sm" />
       <MDTypography variant="button" fontWeight="medium" ml={1} lineHeight={1}>
         {name}
       </MDTypography>
@@ -68,7 +61,7 @@ export default function data() {
     ],
 
     rows: applied.map((items, index) => ({
-      companies: <Company image={avatars[index + 1]} name={items.companies.name} />,
+      companies: <Company name={items.companies.name} />,
       Role: (
         <MDTypography variant="caption" color="text" fontWeight="medium">
           {items.role}

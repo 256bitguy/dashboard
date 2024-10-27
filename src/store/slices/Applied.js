@@ -16,7 +16,6 @@ const initialState = {
     {
       key: 2,
       companies: {
-        image: "logoABC",
         name: "ABC Tech Solutions",
       },
       role: "Full-Stack Developer",
@@ -27,7 +26,6 @@ const initialState = {
     {
       key: 3,
       companies: {
-        image: "logoXYZ",
         name: "XYZ Innovations",
       },
       role: "UI/UX Designer",
@@ -38,7 +36,6 @@ const initialState = {
     {
       key: 4,
       companies: {
-        image: "logo123",
         name: "123 Digital Agency",
       },
       role: "Backend Developer",
@@ -49,7 +46,6 @@ const initialState = {
     {
       key: 5,
       companies: {
-        image: "logoQRS",
         name: "QRS Technologies",
       },
       role: "Data Scientist",
@@ -64,8 +60,18 @@ export const appliedSlice = createSlice({
   initialState,
   reducers: {
     list: (state, action) => {
-      state.companies = state.applied.length;
-      console.log(state.companies);
+      const { companies, role, packages, preparation, requirements } = action.payload;
+      console.log(action.payload);
+      const key = state.applied.length;
+      const added = {
+        key: key,
+        companies: { name: companies },
+        role: role,
+        package: packages,
+        preparation: preparation,
+        requirements: requirements,
+      };
+      state.applied.push(added);
     },
   },
 });

@@ -8,6 +8,8 @@ import SignUp from "layouts/authentication/sign-up";
 import Icon from "@mui/material/Icon";
 import Dashboard from "layouts/dashboard";
 
+import JobForm from "layouts/FormAdd/JobForm";
+
 const routes = [
   {
     type: "collapse",
@@ -17,7 +19,14 @@ const routes = [
     route: "/dashboard",
     component: <Dashboard />,
   },
-
+  {
+    type: "collapse",
+    name: "JobForm",
+    key: "JobForm",
+    icon: <Icon fontSize="small">Form</Icon>,
+    route: "/formadd",
+    component: <JobForm />,
+  },
   {
     type: "collapse",
     name: "Tables",
